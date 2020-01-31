@@ -4,9 +4,6 @@ apt install -y git automake build-essential pkg-config libevent-dev libncurses5-
 pushd .
 cd /tmp
 rm -fr /tmp/tmux
-git clone https://github.com/tmux/tmux.git /tmp/tmux
-cd /tmp/tmux
+git clone https://github.com/tmux/tmux.git /tmp/tmux && cd /tmp/tmux
 git checkout master
-sh autogen.sh && ./configure && make && make install
-popd 
-rm -fr /tmp/tmux
+sh autogen.sh && ./configure && make && make install && popd && rm -fr /tmp/tmux

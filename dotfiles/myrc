@@ -1,0 +1,21 @@
+# some env. vars
+export MYLNXTOOLS=~/.local/lnx-tools
+
+function wsh
+{
+  echo -e "Current shell is \033[33m$SHELL\033[0m"
+}
+
+alias golnxtools='cd $MYLNXTOOLS'
+
+# git shortcuts
+alias gits='git status'
+alias gstatus='git status'
+alias gpush='git push'
+alias gpull='git pull'
+alias gclone='git clone'
+alias gcommit='git commit -m '
+alias gaddu='git add -u'
+alias gaddf='git add '
+# cache credentials for 4 hours
+alias gcachecred='CRED_TO=18000; echo "Caching git credentials for $CRED_TO..."; git config credential.helper store && git config --global credential.helper "cache --timeout $CRED_TO"'
